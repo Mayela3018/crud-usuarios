@@ -1,4 +1,4 @@
-# 👥 CRUD de Usuarios — Mayela Ticona Mamani
+# 👥 CRUD de Usuarios — M.T.M
 
 > Aplicación web fullstack para gestión de usuarios, desplegada en Render con base de datos PostgreSQL en la nube.
 
