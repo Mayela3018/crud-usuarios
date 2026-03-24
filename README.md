@@ -110,7 +110,7 @@ CREATE TABLE usuarios (
   "email":    "mayeticonamamani@gmail.com",
   "edad":     20,
   "ciudad":   "Lima",
-  "telefono": "990568322"
+  "telefono": "990568321"
 }
 ```
 
@@ -175,4 +175,4 @@ Abre `frontend/index.html` con **Live Server** en VS Code.
 
 ## 📄 Licencia
 
-Este proyecto fue desarrollado como parte del laboratorio académico de **TECSUP** — 2025.
+Este proyecto fue desarrollado como parte del laboratorio académico de **TECSUP** — 2026.
