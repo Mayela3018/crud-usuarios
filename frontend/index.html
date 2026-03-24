@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRUD Usuarios 💻</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="header">
+      <h1>👥 CRUD de Usuarios</h1>
+      <p>Gestión completa de usuarios con PostgreSQL</p>
+    </header>
+
+    <div class="card">
+      <h2 class="card-title">➕ Agregar Usuario</h2>
+      <form id="form">
+        <div class="form-grid">
+          <div class="input-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text"   id="nombre"   placeholder="Ej: Mayela Ticona" required/>
+          </div>
+          <div class="input-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email"  id="email"    placeholder="Ej: mayela@gmail.com" required/>
+          </div>
+          <div class="input-group">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad"     placeholder="Ej: 20" min="1" max="120"/>
+          </div>
+          <div class="input-group">
+            <label for="ciudad">Ciudad</label>
+            <input type="text"   id="ciudad"   placeholder="Ej: Lima"/>
+          </div>
+          <div class="input-group">
+            <label for="telefono">Teléfono</label>
+            <input type="text"   id="telefono" placeholder="Ej: 990568322"/>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">💾 Guardar Usuario</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <div class="card-header-row">
+        <h2 class="card-title">📋 Lista de Usuarios</h2>
+        <span id="contador" class="badge">0 usuarios</span>
+      </div>
+      <div id="lista" class="user-grid"></div>
+    </div>
+
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <h2>✏️ Editar Usuario</h2>
+      <form id="form-edit">
+        <input type="hidden" id="edit-id"/>
+        <div class="form-grid">
+          <div class="input-group">
+            <label>Nombre</label>
+            <input type="text"   id="edit-nombre"   required/>
+          </div>
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email"  id="edit-email"    required/>
+          </div>
+          <div class="input-group">
+            <label>Edad</label>
+            <input type="number" id="edit-edad"/>
+          </div>
+          <div class="input-group">
+            <label>Ciudad</label>
+            <input type="text"   id="edit-ciudad"/>
+          </div>
+          <div class="input-group">
+            <label>Teléfono</label>
+            <input type="text"   id="edit-telefono"/>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="submit"  class="btn btn-primary">💾 Actualizar</button>
+          <button type="button"  class="btn btn-cancel" onclick="cerrarModal()">✖ Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
